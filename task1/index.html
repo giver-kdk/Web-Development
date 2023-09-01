@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .red
+    {
+        color: red;
+    }
+    .blue
+    {
+        color: blue;
+    }
+</style>
+<body>
+    <div class="container">
+        <img src="./cat.jpg" alt="pic of cat" onmouseout="handleMouseOut()" onmouseover="handleMouseOver()">
+        <p class="red">This is a picture of a cat.</p>
+    </div>
+    <script>
+        function handleMouseOver(e)
+        {
+            let elem = document.querySelector(".container > p");
+            elem.innerText = "This is a kind of lion";
+            elem.classList.remove("red");
+            elem.classList.add("blue");
+        }
+        function handleMouseOut(e)
+        {
+            let elem = document.querySelector(".container > p");
+            elem.innerText = "This is a picture of a cat";
+            elem.classList.remove("blue");
+            elem.classList.add("red");
+        }
+    </script>
+</body>
+</html>
