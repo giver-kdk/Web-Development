@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cookie Store</title>
+</head>
+
+<body>
+	<input type="text" class="key" placeholder="Enter cookie key">
+	<input type="text" class="value" placeholder="Enter cookie value">
+	<button class="btn" onclick=createCookies()>Create Cookie</button>
+	<p class="result"></p>
+	<button class="btn" onclick=readCookies()>Read Cookie</button>
+	<button class="btn" onclick=deleteCookies()>Delete All Cookies</button>
+</body>
+<script>
+	let keyBox = document.querySelector(".key");
+	let valueBox = document.querySelector(".value");
+	let result = document.querySelector(".result");
+	function createCookies() {
+		if (keyBox.value && valueBox.value) {
+			document.cookie = `${keyBox.value} = ${valueBox.value}`;
+			alert("Cookies has been created");
+		}
+		else {
+			alert("Either key or value is missing!");
+		}
+	}
+	function readCookies() {
+		let allCookies = document.cookie;
+		let cookieArray = allCookies.split("; ");
+		result.innerHTML = "";
+		for (let i = 0; i < cookieArray.length; i++) {
+			// Split "username = Giver Khadka" into ["username", "Giver Khadka"] and so on
+			let key = cookieArray[i].split("=")[0];
+			let value = cookieArray[i].split("=")[1];
+			let newCookie = `Key is ${key} and value is ${value}`;
+			result.innerHTML = result.innerHTML + "<br>" + newCookie;
+		}
+	}
+	function deleteCookies() {
+		let allCookies = document.cookie;
+		let cookieArray = allCookies.split("; ");
+
+		for (let i = 0; i < cookieArray.length; i++) {
+			// Extract key from cookie and use that to set expiry date to past date
+			let key = cookieArray[i].split("=")[0];
+			document.cookie = `${key} =; expires = un, 01 Jan 2000 01:00:00 GMT`;
+		}
+		result.innerHTML = "";
+		alert("Cookies has been deleted");
+	}
+</script>
+
+</html>
