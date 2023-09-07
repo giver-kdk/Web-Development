@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Task</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <input type="text" class="input__box">
+        <button onclick=showMsg() class="clicker">Show</button>
+    </div>
+    <script>
+      function showMsg()
+      {
+        // Access value fo input box using "val()" in jQuery
+        let msg = $(".input__box").val();       
+        // let text = msg.value;                // This is invalid in jQuery
+        alert(msg);
+      }
+    </script>
+</body>
+</html>
