@@ -15,20 +15,25 @@
                     <th>Action</th>
                 <tr>";
     $data = "";
-    $s = 1;
+    $sn = 1;
+    // "fetch_assoc" fetches result row as associative array
+    // Use loop to create tabel rows with data filled in it
     while($row = $result->fetch_assoc()){
-        // Concatination of string in PHP
+        // Concatination of string in PHP using '.'
         $data = $data . "<tr>
-                            <td>".$s."</td><td>" . 
-                            $row['task_name']. "</td><td>" . 
-                            $row['start_date']. "</td><td>" . 
-                            $row['end_date']. "</td><td>" . 
-                            $row['user_id']. "</td><td><a href='delete.php?id=" . 
-                            $row['task_id']."' class='btn btn-danger'>Delete</a>
-                            <a href='edit.php?id=" . $row['task_id'] . "' class='btn btn-success'>Edit</a>
-                            <td></tr>"; 
+                            <td>" . $sn . "</td>" . 
+                            "<td>" . $row['task_name'] . "</td>" . 
+                            "<td>" . $row['start_date'] . "</td>" . 
+                            "<td>" . $row['end_date'] . "</td>" . 
+                            "<td>" . $row['user_id'] . "</td>" . 
+                            "<td>" . 
+                                "<a href='delete.php?id=" . $row['task_id'] . "' class='btn btn-danger'>Delete</a>" . 
+                                "<a href='edit.php?id=" . $row['task_id'] . "' class='btn btn-success'>Edit</a>" . 
+                            "</td>" . 
+                        "</tr>"; 
 
-        $s++;
+        $sn++;
     }
+    // Concatinating variables and strings finally to display HTML table with data
     echo $list.$data."</table>";
 ?>
