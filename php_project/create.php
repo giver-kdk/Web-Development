@@ -1,4 +1,7 @@
 <?php
+   include('header.php');
+?>
+<?php
 // $mysqli = new mysqli("localhost","my_user","my_password","my_db");
 $conn = new mysqli('localhost','root','','todolist');
 if($conn->connect_error)
@@ -33,6 +36,7 @@ if(isset($_POST['btnsave'])){
 ?>
 <!-- Link Bootstrap like in HTML -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" >
+<a href="display.php">Back to List</a>
 <form method="post" action="create.php">
     task name <input type="text" name="txttaskname" class="form-control">
     start date <input type="text" name="txtstartdate" class="form-control">

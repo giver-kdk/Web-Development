@@ -1,5 +1,9 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" >
 <?php
+   include('header.php');
+?>
+<a href="create.php">Create New</a>
+<?php
     $conn = new mysqli('localhost','root','','todolist');
     $sql = "SELECT * from task";
 
@@ -36,4 +40,5 @@
     }
     // Concatinating variables and strings finally to display HTML table with data
     echo $list.$data."</table>";
+    include "footer.php";
 ?>

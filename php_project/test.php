@@ -1,4 +1,3 @@
 <?php
-
-echo "This is a test";
+echo "Welcome in my Website";
 ?>

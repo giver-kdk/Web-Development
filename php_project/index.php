@@ -1,6 +1,5 @@
-<?php
-// The "test.php" code will be copy pasted here 
+<?php 
+echo ("Welcome to PHP");
+
 include "test.php";
-// Print a statement
-echo "Hello World";
 ?>
