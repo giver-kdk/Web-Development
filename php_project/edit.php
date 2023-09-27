@@ -10,7 +10,7 @@ $sdate = "";
 $edate = "";
 $uid = "";
 $id = $_GET["id"];
-$sql = "SELECT * from task where id=" . $_GET["id"];
+$sql = "SELECT * from task where task_id=" . $id;
 // Run the query and store the result
 $result = $conn ->query($sql);
 while($row = $result->fetch_assoc()){
@@ -56,7 +56,7 @@ if(isset($_POST['btnsave'])){
 <!-- Link Bootstrap like in HTML -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" >
 <h2>Update Form</h2>
-<form method="post" action="edit.php?id=<?php echo $_GET['id']; ?>">
+<form method="post" action="edit.php?id=<?php echo $id ?>">
     task name <input type="text" name="txttaskname" class="form-control" value="<?php echo $tname?>">
     start date <input type="text" name="txtstartdate" class="form-control" value="<?php echo $sdate?>">
     end date <input type="text" name="txtenddate" class="form-control" value="<?php echo $edate?>">
