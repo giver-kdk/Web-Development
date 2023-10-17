@@ -1,11 +1,30 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" >
+<div class="container">
 <?php
    include('header.php');
 ?>
 <a href="create.php">Create New</a>
+<form action="display.php" method="post">
+    Enter task name 
+    <input type="text" name ="textSearch">
+    <input type="submit" name="btnSearch" class="btn btn-info" value="Search">  
+</form>
+<form action="display.php">
+    <input type="submit" name="showAll" class="btn btn-success" value="Show All">  
+</form>
 <?php
     $conn = new mysqli('localhost','root','','todolist');
-    $sql = "SELECT * from task";
+    $searchtext="";
+    if(isset($_POST['btnSearch']))
+    {
+        $searchtext = $_POST['textSearch'];
+        $sql = "SELECT * from task where task_name like '%$searchtext%'";
+
+    }
+    else
+    {
+        $sql = "SELECT * from task";
+    }
 
     $result = $conn ->query($sql);
     // Create Table Header
@@ -43,3 +62,4 @@
     echo $list.$data."</table>";
     include "footer.php";
 ?>
+</div>
