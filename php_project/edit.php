@@ -13,6 +13,7 @@ $id = $_GET["id"];
 $sql = "SELECT * from task where task_id=" . $id;
 // Run the query and store the result
 $result = $conn ->query($sql);
+// "fetch_assoc()" fetches next row as associative array at each iteration. 
 while($row = $result->fetch_assoc()){
     $tname = $row['task_name'];
     $sdate = $row['start_date'];

@@ -20,8 +20,9 @@
                 <tr>";
     $data = "";
     $sn = 1;
-    // "fetch_assoc" fetches result row as associative array
     // Use loop to create tabel rows with data filled in it
+    // "fetch_assoc()" fetches next row as associative array at each iteration. 
+	// When all row fetched, while loop stops.
     while($row = $result->fetch_assoc()){
         // Concatination of string in PHP using '.'
         $data = $data . "<tr>
