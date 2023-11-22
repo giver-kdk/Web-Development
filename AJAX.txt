@@ -1,3 +1,6 @@
 AJAX doesn't do reload...it fetches data very quick(For eg: Search engine search recommendation)...
 user doesn't knwo abou the request being sent...it is fast....
 Eg: In login page to sent logindata, auto text complete, rating and voting, user post update in their profile
+
+To enable AJAX in Chrome: 
+- Paste: --disable-web-security --user-data-dir="C:/ChromeDevSession"
