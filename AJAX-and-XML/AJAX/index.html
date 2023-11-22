@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Demo</title>
+</head>
+<body>
+    <button onclick="loadDoc()">Read</button>
+    <div id="demo"></div>
+    <script type="text/javascript">
+        function loadDoc()
+        {
+            var http = new XMLHttpRequest();
+            http.onreadystatechange = function()
+            {
+                // Here, '4' means the request-response cycle is complete
+                if(this.readyState == 4 && this.status == 200)
+                {
+                    document.getElementById('demo').innerText = this.responseText;
+                }
+            }
+            http.open("GET", "myFile.txt", true);
+            http.send();
+        }
+    </script>
+</body>
+</html>
