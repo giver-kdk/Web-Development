@@ -26,7 +26,7 @@
         $sql = "SELECT * from task";
     }
 
-    $result = $conn ->query($sql);
+    $result = $conn->query($sql);
     // Create Table Header
     $list = "<table class='table'>
                 <tr>
