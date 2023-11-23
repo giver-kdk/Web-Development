@@ -12,9 +12,10 @@
         function loadDoc()
         {
             var http = new XMLHttpRequest();
+			// When 'readyState' object changes on request 
             http.onreadystatechange = function()
             {
-                // Here, '4' means the request-response cycle is complete
+                // Here, '4' means the request-response cycle is done
                 if(this.readyState == 4 && this.status == 200)
                 {
                     document.getElementById('demo').innerText = this.responseText;

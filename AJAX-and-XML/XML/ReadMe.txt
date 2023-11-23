@@ -8,6 +8,7 @@
 - We can store text, image(binary data)
 
 - Components of XML is like HTML: 
+	- Custom Root Tag
     - Element
     - Attributes
     - Entities: &It;(<)
@@ -28,4 +29,7 @@
 - XSD means XML Schema Definition 
 
 - Download XML viewer form: https://www.mindfusion.eu/xml-viewer.html and Install usign "setup" file
-- 
+
+**************************************************************************
+- For a great XML doc: https://github.com/zurfyx/XML-in-10-minutes#xsl-1
+**************************************************************************

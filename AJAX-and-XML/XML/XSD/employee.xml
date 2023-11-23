@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Linking XSD through the root element -->
+<!-- Here, 'xmlns:xsi' provides standard element and data types -->
+<employee_list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./emp_struct.xsd"> 
+    <employee id="1">
+        <name>Smith Nepal</name>
+        <salary>40000</salary>
+        <email>smithnepal1234@gmail.com</email>
+        <contact>9800000000</contact>
+    </employee>
+    <employee id="2">
+        <name>Rameshwor Nepal</name>
+        <salary>80000</salary>
+        <email>rameshwor1234@gmail.com</email>
+        <contact>9700000000</contact>
+    </employee>
+    <employee id="3">
+        <name>Alex KC</name>
+        <salary>80000</salary>
+        <email>rameshwor1234@gmail.com</email>
+        <contact>9700000000</contact>
+    </employee>
+</employee_list>

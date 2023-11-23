@@ -4,3 +4,15 @@ Eg: In login page to sent logindata, auto text complete, rating and voting, user
 
 To enable AJAX in Chrome: 
 - Paste: --disable-web-security --user-data-dir="C:/ChromeDevSession"
+
+
+The AJAX 'readyState' object has 5 states: 
+- 0 (UNSENT)
+
+- 1 (OPENED)
+
+- 2 (HEADERS_RECEIVED)
+
+- 3 (LOADING)
+
+- 4 (DONE)

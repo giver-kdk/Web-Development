@@ -1,5 +1,5 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
-<!-- This is comment in XML -->
+<!-- 'employee_list' is the root element -->
 <employee_list> 
     <employee id="1">
         <name>Smith Nepal</name>

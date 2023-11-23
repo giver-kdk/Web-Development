@@ -1,0 +1,9 @@
+<!-- DTD(Document Type Definition) is used to define the structure of an XML -->
+<!-- Defining which elements contain what elements inside them -->
+<!ELEMENT employee_list(employee)>
+<!ELEMENT employee(name, salary, email, contact)>
+<!-- Defining 'name' element is a parsable data -->
+<!ELEMENT name(#PCDATA)>
+<!ELEMENT salary(#PCDATA)>
+<!ELEMENT email(#PCDATA)>
+<!ELEMENT contact(#PCDATA)>
