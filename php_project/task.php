@@ -21,7 +21,17 @@ session_start();
        $s=1;
        while ($row=$result->fetch_assoc())
        {
-            $data=$data. "<tr><td>".$s."</td><td>".$row['task_name']."</td><td>".$row['start_date']."</td><td>".$row['end_date']."</td><td>".$row['user_id']."</td><td><a href='delete.php?id=".$row['task_id']."' class='btn btn-danger'>Delete</a><a href='edit.php?id=".$row['task_id']."' class='btn btn-success'> Edit</a></td></tr>";
+            $data=$data."<tr>
+							<td>".$s."</td>
+							<td>".$row['task_name']."</td>
+							<td>".$row['start_date']."</td>
+							<td>".$row['end_date']."</td>
+							<td>".$row['user_id']."</td>
+							<td>
+								<a href='delete.php?id=".$row['task_id']."' class='btn btn-danger'>Delete</a>
+								<a href='edit.php?id=".$row['task_id']."' class='btn btn-success'> Edit</a>
+							</td>
+						</tr>";
             $s++;
        }
        echo $list.$data.'</table>';

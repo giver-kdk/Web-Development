@@ -21,6 +21,7 @@
                     document.getElementById('demo').innerText = this.responseText;
                 }
             }
+			// http.open(method, url, async)
             http.open("GET", "myFile.txt", true);
             http.send();
         }

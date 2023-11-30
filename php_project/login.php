@@ -11,7 +11,7 @@ session_start();
     $result=$conn->query($sql);
     while($row=$result->fetch_assoc())
     {
-        $_SESSION['user_id']=$row['id'];
+        $_SESSION['user_id']=$row['user_id'];
         $_SESSION['fullname']=$row['fullname'];
 
         if($row['user_type']==1)

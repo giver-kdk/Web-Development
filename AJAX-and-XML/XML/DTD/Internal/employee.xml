@@ -1,0 +1,33 @@
+<?xml version = "1.0" encoding = "UTF-8" standalone="yes"?>
+<!-- Here, 'standalone' set to "yes" means, XML can work without external source -->
+<!-- Tell DTD that 'employee_list' is the root and write DTD rules inside '[]' -->
+ <!DOCTYPE employee_list [
+	<!ELEMENT employee_list(employee)>
+	<!ELEMENT employee(name, salary, email, contact)>
+	<!-- Defining 'name' element is a parsable data -->
+	<!ELEMENT name(#PCDATA)>
+	<!ELEMENT salary(#PCDATA)>
+	<!ELEMENT email(#PCDATA)>
+	<!ELEMENT contact(#PCDATA)>
+]>
+
+<employee_list> 
+    <employee id="1">
+        <name>Smith Nepal</name>
+        <salary>40000</salary>
+        <email>smithnepal1234@gmail.com</email>
+        <contact>9800000000</contact>
+    </employee>
+    <employee id="2">
+        <name>Rameshwor Nepal</name>
+        <salary>80000</salary>
+        <email>rameshwor1234@gmail.com</email>
+        <contact>9700000000</contact>
+    </employee>
+    <employee id="3">
+        <name>Alex KC</name>
+        <salary>80000</salary>
+        <email>rameshwor1234@gmail.com</email>
+        <contact>9700000000</contact>
+    </employee>
+</employee_list>
