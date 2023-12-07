@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>Lab 1.b</title>
+	<style>
+		*{margin: 0; padding: 0;}
+		.box{
+			display: grid;
+			grid-template-areas: 
+			'b1		b1		b2'
+			'b3		b4		b2'
+			'b3		b5		b5';
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 1fr 1fr 1fr;
+		}
+		.box div{border: 2px solid black;}
+	</style>
+</head>
+<body style="height: 100vh; display: flex; align-items: center; justify-content: center;">
+	<div class="box" style="width: 600px; height: 600px;">
+		<div style="background-color: red; grid-area: b1;"></div>
+		<div style="background-color: blue; grid-area: b2;"></div>
+		<div style="background-color: green; grid-area: b3;"></div>
+		<div style="background-color: grey; grid-area: b4;"></div>
+		<div style="background-color: yellow; grid-area: b5;"></div>
+	</div>
+</body>
+</html>

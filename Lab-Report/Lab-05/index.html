@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>Form Validation with JS</title>
+</head>
+<body>
+	<form>
+		<input type="text" id="uname" placeholder="Name" style="display: block;">
+		<input type="password" id="pw" placeholder="Password" style="display: block;">
+		<input type="submit" id="sub" value="Submit" style="display: block;" onclick="check()"/>
+	</form>
+	<script>
+		function check(e)
+		{
+			let pwRegex = /^[A-Z]+\$$/gi;			// Start with capital and end with '$'
+			let user = document.getElementById("uname").value;
+			let password = document.getElementById("pw").value;
+			let success = true;
+			if(!user){
+				alert("User name should not be empty!");
+				success = false;
+			}
+			if(!pwRegex.test(password)){
+				alert("Password must start with capital letter and end with $!");
+				success = false;
+			}
+			if(success) alert("Form Submit Successful!");
+		}
+	</script>
+</body>
+</html>

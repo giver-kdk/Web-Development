@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Mouseover Event</title>
+</head>
+<body>
+    <div class="container">
+        <img src="./cat.jpg" alt="pic of cat" onmouseout="out()" onmouseover="over()">
+        <p class="red">This is a picture of a cat.</p>
+    </div>
+    <script>
+        function over(e){
+            let elem = document.querySelector(".container > p");
+            elem.innerText = "This is a kind of lion";
+        }
+        function out(e){
+            let elem = document.querySelector(".container > p");
+            elem.innerText = "This is a picture of a cat";
+        }
+    </script>
+</body>
+</html>
