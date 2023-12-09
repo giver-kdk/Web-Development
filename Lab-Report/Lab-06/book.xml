@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Create an XML for book details with simple and complex elements
+(a) Create XQuery to select book details where price is greater than 3000.
+(b) Create XSLT for book details -->
+<?xml-stylesheet type="text/xsl" href="./book_style.xsl"?>
+<books>
+	<book id="1">
+		<name>Physics</name>
+		<price>5000</price>
+		<author>John Braham</author>
+	</book>
+	<book id="2">
+		<name>Chemistry</name>
+		<price>4000</price>
+		<author>Alex Hawking</author>
+	</book>
+	<book id="3">
+		<name>Math</name>
+		<price>2000</price>
+		<author>Ben Tenison</author>
+	</book>
+  	<?xquery version="1.0"?>
+  	<result>
+		{
+			for $x in doc("index.xml")/books/book
+			where $x/price>3000
+			return $x
+		}
+	</result>
+</books>

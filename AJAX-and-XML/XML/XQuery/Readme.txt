@@ -1,0 +1,2 @@
+- XQuery is used to query XML data, just like SQL is used to query DB data
+- 
